@@ -13,6 +13,11 @@
     "@nuxt/devtools": "latest",
     "nuxt": "^3.8.0",
     "vue": "^3.3.7",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.7.15"
+  },
+  "dependencies": {
+    "pnpm": "^8.10.2"
   }
 }
