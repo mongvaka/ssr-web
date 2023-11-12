@@ -1,5 +1,6 @@
 <template>
-<div class="card">
+ <NuxtLink to="/order">
+ <div class="card">
     <div class="icon">
         <img src="/images/users.svg" alt="">
         <!-- <svg src viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -11,6 +12,8 @@
         {{ detail }}
     </div>
 </div>
+ </NuxtLink>
+
 </template>
 <script setup>
 
@@ -43,6 +46,9 @@ export default {
   align-items: center;
   gap: 1em;
   margin: 10px;
+  display: inline-block;
+  text-decoration:none;
+  color: #464853;
 }
 
 .card__body {

@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1>หน้าแรก</h1>
+    <div class="header">
+<h1>Feature</h1>
+    </div>
+    
   <div class="allProduct">
       <card  title="ระบบสมาชิก"
       detail="ระบบสามารถยืนยันตัวตนผู้ใช้งาน เพิ่มผู้ใช้งาน และจำกัดสิทธิการเข้าถึงได้"
@@ -24,6 +27,9 @@ export default {};
 </script>
 
 <style>
+.header{
+  text-align: center;
+}
 .allProduct{
   display: flex;
   flex-wrap: wrap;
