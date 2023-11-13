@@ -12,6 +12,22 @@ module.exports={
         use:['label-loader','vue-svg-loader']
       })
     }
+  },
+  buildModule:[
+    '@nuxtjs/google-fonts'
+  ],
+  googleFonts: {
+    families:{
+      Roboto:[300,500,700],
+    }
+  },
+  app:{
+    head:{
+      title:"BIZ SPACE รับทำระบบ",
+      meta:[
+        {name:"description",content:"รับทำระบบ ERP Marketplace อกกแบบระบบตามความต้องการ"}
+      ]
+    }
   }
 
 }

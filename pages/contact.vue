@@ -7,7 +7,17 @@
   </div>
 
 </template>
-
+<script setup>
+useHead({
+  title:"BIZ SPACE รับทำระบบ : ติดต่อเรา",
+  meta:[
+    {
+      name:"description",
+      content:"ติดต่อ BIZ SPACE"
+    }
+  ]
+})
+</script>
 <script>
 export default {
 

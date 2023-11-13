@@ -1,8 +1,8 @@
 <template>
- <NuxtLink to="/order">
+ <NuxtLink :to="'/product/'+id">
  <div class="card">
     <div class="icon">
-        <img src="/images/users.svg" alt="">
+        <img :src="icon" alt="">
         <!-- <svg src viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
         </svg> -->
     </div>
@@ -17,7 +17,7 @@
 </template>
 <script setup>
 
-defineProps(['title','detail','icon-url'])
+defineProps(['id','title','detail','icon','childrents'])
 
 </script>
 <script >
