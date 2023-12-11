@@ -28,6 +28,8 @@ module.exports={
         {name:"description",content:"รับทำระบบ ERP Marketplace อกกแบบระบบตามความต้องการ"}
       ]
     }
-  }
+  },
+  plugins: [
+  ],
 
 }

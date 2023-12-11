@@ -397,7 +397,7 @@ const  FEATURE: {
             route: 'custom',
             chidrents:[
                 {
-                    selected:true,
+                    selected:false,
                     name:'ระบบเพิ่มลบแก้ไข',
                     icon:'sketch.png',
                     price: 4500,
@@ -405,7 +405,7 @@ const  FEATURE: {
                     description:'โมดูลเสริมที่ออกแบบเองตามความความต้องการของผู้ใช้งาน เช่น โมดูลการจัดการพนักงาน ของระบบ Erp ที่จำเป็นต้องเก็บ Requirement เพิ่ม'  
                 },
                 {
-                    selected:true,
+                    selected:false,
                     name:'ระบบฟังชั่นการทำงานที่ซับซ้อน',
                     icon:'sketch.png',
                     price: 4500,

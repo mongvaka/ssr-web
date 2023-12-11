@@ -1,7 +1,7 @@
 <template>
   <div class="main-content">
     <div class="header-main">
-      <!-- <span :key = price  class="text-sum">ราคารวม {{price}} บาท</span> -->
+      <span :key="price" class="text-sum">ราคารวม {{price.toLocaleString()}} บาท</span>
     </div>
     <div class="body-main">
       <div v-for="m in data" class="card-detail-price">
@@ -17,40 +17,37 @@
         </div>
       </div>
       <div class="submit">
-      <input
-        class="inp"
-        for="name"
-        type="text"
-        placeholder="กรอกชื่อ"
-        required
-        v-model="name"
-        @blur="validateEmail"
-      />
-      <input
-        class="inp"
-        for="phone"
-        type="number"
-        v-mask="['(###) ###-####']"
-        placeholder="กรอกเบอร์โทร"
-        required
-        v-model="phone"
-        @blur="validateEmail"
-      />
-
-      <input
-        class="inp"
-        for="email"
-        type="email"
-        placeholder="กรอกอีเมล"
-        required
-        v-model="email"
-        @blur="validateEmail"
-      />
-
-      <div class="send-price">ยื่นขอราคา</div>
+        <div class="from-inp">
+          <input class="inp" for="name" type="text" placeholder="กรอกชื่อ" required v-model="name" />
+        </div>
+        <div class="from-inp">
+          <input
+            class="inp"
+            for="phone"
+            type="number"
+            v-mask="['(###) ###-####']"
+            placeholder="กรอกเบอร์โทร"
+            required
+            v-model="phone"
+            @blur="validateEmail"
+          />
+        </div>
+        <div class="from-inp">
+          <input
+            class="inp"
+            for="email"
+            type="email"
+            placeholder="กรอกอีเมล"
+            required
+            v-model="email"
+            @blur="validateEmail"
+          />
+        </div>
+        <div class="from-inp">
+          <div class="send-price">ยื่นขอราคา</div>
+        </div>
+      </div>
     </div>
-    </div>
-    
   </div>
 </template>
 
@@ -68,16 +65,20 @@ useHead({
 });
 </script>
 <script>
-let price = 0;
 let email, phone, name;
 export default {
+  data(){
+    return {
+      price:0,
+    }
+  },
   methods: {
     temChange() {
-      price = 0;
+      this.price = 0;
       data.forEach(e1 => {
         e1.chidrents.forEach(e2 => {
           if (e2.selected == true) {
-            price += e2.price;
+            this.price += e2.price;
             console.log(e2.name, e2.selected);
           }
         });
@@ -94,8 +95,8 @@ export default {
 };
 </script>
 
-<style>
-.main-content{
+<style scope>
+.main-content {
   max-width: 950px;
 }
 .title-module {
@@ -134,21 +135,30 @@ export default {
   border-color: green;
   border-radius: 15px;
   width: 100px;
-  margin-left: auto;
-  
+  margin-top:3px ;
+
 }
 .send-price:hover {
   cursor: pointer;
 }
 .inp {
   height: 30px;
-  margin-left: 15px;
+  width: 50%;
+  max-width: 500px;
+  font-size: 16px;
 }
 .submit {
   margin-top: 50px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.card-detail-price{
+.card-detail-price {
   padding-left: 0px;
+}
+.from-inp{
+  width: 100%;
+  margin-top: 10px;
+
 }
 </style>
